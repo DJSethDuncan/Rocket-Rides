@@ -2,10 +2,18 @@
 //
 
 #include <iostream>
+using namespace std;
+
+char userInput;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Rocket Rides\n\n";
+    cout << "Choose an option:\n\n";
+    cout << "0) Help\n\n";
+    cout << "=>";
+    cin >> userInput;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
