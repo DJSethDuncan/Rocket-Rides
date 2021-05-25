@@ -6,14 +6,39 @@ using namespace std;
 
 char userInput;
 
+void processInput(char input) {
+    switch (input) {
+    case '0':
+        cout << "Not much to help with here, bruh.\n\n";
+        break;
+    case '5':
+        cout << "Bye.\n\n";
+        return;
+        break;
+    default:
+        cout << "Not sure what you mean, try again maybe?\n\n";
+        break;
+    }
+}
+
 int main()
 {
-    cout << "Rocket Rides\n\n";
-    cout << "Choose an option:\n\n";
-    cout << "0) Help\n\n";
-    cout << "=>";
-    cin >> userInput;
+    cout << "==== Rocket Rides ====\n\n";
 
+    do {
+        cout << "Choose an option:\n\n";
+        cout << "1) Book a seat\n";
+        cout << "2) View available seats\n";
+        cout << "3) View booked seats\n";
+        cout << "4) Cancel a reservation\n";
+        cout << "5) Exit\n";
+        cout << "0) Help\n\n";
+        cout << "=>";
+        cin >> userInput;
+
+        processInput(userInput);
+    } while (userInput != '5');
+ 
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
